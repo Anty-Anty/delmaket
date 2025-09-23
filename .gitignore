@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+
+# Production build output (if created separately)
+build
+
+# Environment variables
+.env
