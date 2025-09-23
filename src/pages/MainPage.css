@@ -1,0 +1,62 @@
+.logo {
+    position: fixed;
+    left: 0;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.links {
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.links a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.links a:hover {
+  color: #646cff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.main-photo{
+    background-color: rgb(36, 36, 36);
+    height:100vh;
+    width:100vw;
+}
+
+.info{
+       background-color: rgb(82, 82, 82);
+    height:100vh;
+    width:100vw;
+}
+
+.works{
+     background-color: rgb(36, 36, 36);
+    height:100vh;
+    width:100vw;
+}
+
+.about{
+    background-color: rgb(233, 179, 179);
+    height:100vh;
+    width:100vw;
+}
+
+.clients{
+        background-color: rgb(82, 82, 82);
+    height:100vh;
+    width:100vw;
+}
+
+.footer{
+
+}
