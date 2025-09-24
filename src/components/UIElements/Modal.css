@@ -1,0 +1,78 @@
+.modal {
+  /* width: calc(30% - 2rem); */
+  min-width: 18rem;
+  height: auto;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* This centers the modal */
+
+  z-index: 100;
+  background: #2c2c2c;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.modal__header {
+
+  color: white;
+}
+
+.modal__header h2 {
+  margin: 0.5rem;
+}
+
+.modal__content {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0.5rem 0.5rem;
+}
+
+.modal__footer {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+/* wrong color in ios fix
+.modal__footer button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.3em 1em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.87);
+} */
+
+/* CSSTransition */
+
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 300ms ease-out;
+}
