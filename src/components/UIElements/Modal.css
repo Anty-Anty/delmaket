@@ -1,6 +1,6 @@
 .modal {
   /* width: calc(30% - 2rem); */
-  min-width: 90vw;
+  width: 75vw;
   /* The modal content will scroll if it exceeds max-height */
   max-height: 80vh;
   /* modal content scrolls */

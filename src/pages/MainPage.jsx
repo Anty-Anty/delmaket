@@ -27,10 +27,15 @@ const MainPage = () => {
 
             <button onClick={() => setShowModal(true)}>Open Modal</button>
 
+            {showModal && (
+                <button className="modal-close-btn" onClick={closeModalHandler}>
+                    ✖
+                </button>
+            )}
+
             <Modal
                 show={showModal}
                 onCancel={closeModalHandler}
-                footer={<button onClick={closeModalHandler}>Close</button>}
             >
                 <p>This is some content inside the modal.</p>
                 <p>You can put text, forms, or even components here.</p>

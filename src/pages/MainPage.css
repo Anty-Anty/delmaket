@@ -5,52 +5,78 @@
 }
 
 .links {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 2rem;
-  color: rgba(255, 255, 255, 0.87);
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 2rem;
+    color: rgba(255, 255, 255, 0.87);
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-.main-photo{
+.main-photo {
     background-color: rgb(36, 36, 36);
-    height:100vh;
-    width:100%;
+    height: 100vh;
+    width: 100%;
 }
 
-.info{
-       background-color: rgb(82, 82, 82);
-    height:100vh;
-    width:100%;
+.info {
+    background-color: rgb(82, 82, 82);
+    height: 100vh;
+    width: 100%;
 }
 
-.works{
-     background-color: rgb(36, 36, 36);
-    height:100vh;
-    width:100%;
+.works {
+    background-color: rgb(36, 36, 36);
+    height: 100vh;
+    width: 100%;
 }
 
-.about{
+.about {
     background-color: rgb(233, 179, 179);
-    height:100vh;
-    width:100%;
+    height: 100vh;
+    width: 100%;
 }
 
-.clients{
-        background-color: rgb(82, 82, 82);
-    height:100vh;
-    width:100%;
+.clients {
+    background-color: rgb(82, 82, 82);
+    height: 100vh;
+    width: 100%;
 }
 
-.modal-works{
-   height: 1500px;
+.modal-works {
+    height: 1500px;
 }
 
-.footer{
+.modal-close-btn {
+    position: fixed;
+    /* fixed to viewport */
+    top: 10px;
+    /* distance from top of screen */
+    right: 10px;
+    /* distance from right edge of screen */
+    background-color: #646cff00;
+    color:  rgba(179, 179, 179, 0.4);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    cursor: pointer;
+    z-index: 1000;
+    /* make sure it’s on top of the modal */
 
+    font-size: 30px;
+    /* set font size */
 }
+
+.modal-close-btn:hover {
+    color: rgba(153, 153, 153, 0.9);
+    outline: none;  /* removes outline on click */
+}
+
+.modal-close-btn:focus-visible {
+  outline: 2px solid #fff;  /* still shows outline when using keyboard navigation */
+}
+
+.footer {}

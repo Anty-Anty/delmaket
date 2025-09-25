@@ -57,7 +57,7 @@ button:focus-visible {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
   /* make it thinner */
 }
 
@@ -77,3 +77,4 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 100, 100, 0.9);
 }
+
