@@ -9,9 +9,7 @@ const MainPage = () => {
 
     const [showModal, setShowModal] = useState(false);
 
-        const closeModalHandler = () => {
-        setShowModal(false);
-    };
+    const closeModalHandler = () => { setShowModal(false) };
 
     return (
         <>
@@ -31,7 +29,7 @@ const MainPage = () => {
 
             <Modal
                 show={showModal}
-                onCancel={() => closeModalHandler}
+                onCancel={closeModalHandler}
                 footer={<button onClick={closeModalHandler}>Close</button>}
             >
                 <p>This is some content inside the modal.</p>

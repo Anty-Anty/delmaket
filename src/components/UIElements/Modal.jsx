@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect  } from "react";
 import ReactDOM from 'react-dom';
 import { CSSTransition } from 'react-transition-group';
 
@@ -29,6 +29,20 @@ const ModalOverlay = props => {
 const Modal = props => {
 
     const nodeRef = useRef(null);
+
+        // Prevent body scroll when modal is open
+    useEffect(() => {
+        if (props.show) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto';
+        };
+    }, [props.show]);
+
 
     return <>
         {props.show && <Backdrop onClickProp={props.onCancel} />}

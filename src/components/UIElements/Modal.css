@@ -1,7 +1,13 @@
 .modal {
   /* width: calc(30% - 2rem); */
-  min-width: 18rem;
-  height: auto;
+  min-width: 90vw;
+  /* The modal content will scroll if it exceeds max-height */
+  max-height: 80vh;
+  /* modal content scrolls */
+  overflow-y: auto;
+
+
+  /* height: auto; */
 
   position: fixed;
   top: 50%;
@@ -14,6 +20,9 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   border-radius: 8px;
   color: rgba(255, 255, 255, 0.87);
+
+
+
 }
 
 .modal__header {
@@ -76,3 +85,4 @@
   opacity: 0;
   transition: opacity 300ms ease-out;
 }
+
