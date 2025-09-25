@@ -1,16 +1,20 @@
 .logo {
     position: fixed;
-    left: 0;
-    color: rgba(255, 255, 255, 0.87);
+    left: 5%;
+    top: 2%;
 }
 
 .links {
     position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 6%;
+    top: 4%;
+    /* transform: translateX(-50%); */
     display: flex;
     gap: 2rem;
-    color: rgba(255, 255, 255, 0.87);
+}
+
+.links a {
+    font-size: 1.2rem;
 }
 
 html {
@@ -21,6 +25,21 @@ html {
     background-color: rgb(36, 36, 36);
     height: 100vh;
     width: 100%;
+}
+
+.main-photo p{
+    top:15%;
+    left: 5%;
+ position: absolute;
+}
+
+.main-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* fills div without stretching */
+    display: block;
+    /* removes small inline gap */
 }
 
 .info {
@@ -59,7 +78,7 @@ html {
     right: 10px;
     /* distance from right edge of screen */
     background-color: #646cff00;
-    color:  rgba(179, 179, 179, 0.4);
+    color: rgba(179, 179, 179, 0.4);
     border: none;
     padding: 0.4rem 0.8rem;
     cursor: pointer;
@@ -72,11 +91,46 @@ html {
 
 .modal-close-btn:hover {
     color: rgba(153, 153, 153, 0.9);
-    outline: none;  /* removes outline on click */
+    outline: none;
+    /* removes outline on click */
 }
 
 .modal-close-btn:focus-visible {
-  outline: 2px solid #fff;  /* still shows outline when using keyboard navigation */
+    outline: 2px solid #fff;
+    /* still shows outline when using keyboard navigation */
 }
 
 .footer {}
+
+@media (max-width: 576px) {
+
+    .links {
+        flex-direction: column;
+        /* stack vertically */
+        align-items: flex-end;
+        /* keep them aligned to the right */
+        gap: 1.5rem;
+        /* smaller spacing between items */
+        right: 7%
+    }
+
+    .links a {
+        font-size: 1.2rem;
+        border: 1px solid rgba(32, 32, 32, 0.87);
+        /* adds a visible border */
+        border-radius: 10px;
+        /* rounded corners, adjust px as needed */
+        padding: 0.3rem 0.8rem;
+        /* add padding so text doesn’t touch the border */
+        padding-top: 0.1rem;
+        transition: all 0.3s ease;
+        /* optional: smooth hover effect */
+    }
+
+    a:hover {
+
+        border-color: rgba(32, 32, 32, 0.5);
+    }
+
+
+}

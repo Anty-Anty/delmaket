@@ -15,18 +15,34 @@ const MainPage = () => {
         <>
             <div className="logo">
                 <a href="#home">delmaket</a>
+                
             </div>
 
             <div className="links">
                 <a href="#models">макеты</a>
-                <a href="#about">о мастерской</a>
                 <a href="#contacts">контакты</a>
             </div>
 
-            <div id="home" className="main-photo"></div>
+            <div id="home" className="main-photo">
+                <p>Макеты, которые рассказывают <br /> историю вашего проекта</p>
+                
+                <img src="/images/main.webp" alt="photo" />
+            </div>
 
-            <button onClick={() => setShowModal(true)}>Open Modal</button>
+            <div onClick={() => setShowModal(true)}>Open Modal</div>
+                <p>Нашей макетной мастерской более 25 лет. Мы делаем макеты любой сложности.</p>
+            <div className="info">
+                
+            </div>
+            <div id="models" className="works"></div>
+            <div className="about"></div>
+            <div className="clients"></div>
 
+            <div id="contacts">
+                <Footer />
+            </div>
+
+             {/* MODAL */}
             {showModal && (
                 <button className="modal-close-btn" onClick={closeModalHandler}>
                     ✖
@@ -41,15 +57,6 @@ const MainPage = () => {
                 <p>You can put text, forms, or even components here.</p>
                 <div className="modal-works">h</div>
             </Modal>
-
-            <div className="info"></div>
-            <div id="models" className="works"></div>
-            <div id="about" className="about"></div>
-            <div className="clients"></div>
-
-            <div id="contacts">
-                <Footer />
-            </div>
 
         </>
     )
