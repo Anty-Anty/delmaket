@@ -1,14 +1,29 @@
-.logo {
+/* HEADER */
+
+.header {
+    width: 100%;
+    height: 4rem;
     position: fixed;
-    left: 4rem;
-    top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    z-index: 100;
+}
+
+.header.scrolled {
+    background-color: rgba(255, 255, 255, 0.6);
+    /* or any color */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+
+    margin: 2rem;
 }
 
 .links {
-    position: fixed;
-    right: 4rem;
-    top: 3rem;
-    /* transform: translateX(-50%); */
+    margin-top: 1rem;
+    margin-right: 3rem;
     display: flex;
     gap: 2rem;
 }
@@ -20,6 +35,8 @@
 html {
     scroll-behavior: smooth;
 }
+
+/* MAIN PHOTO */
 
 .main-photo {
     background-color: rgb(36, 36, 36);
@@ -45,6 +62,7 @@ html {
     /* removes small inline gap */
 }
 
+/* INFO */
 .info {
     width: 100%;
 }
@@ -52,6 +70,7 @@ html {
 .info-child {
     margin: 4rem;
     margin-top: 6rem;
+    margin-bottom: 0;
 }
 
 .info-bullet-points {
@@ -67,31 +86,93 @@ html {
     justify-content: center;
 }
 
-.info-img img{
+.info-img img {
     width: 90%;
 }
 
+/* WORKS */
 .works {
-    background-color: rgb(36, 36, 36);
-    height: 100vh;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.works-child {
+    margin-top: 5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* grid-auto-rows: 325px; */
+    gap: 1rem;
+}
+
+.works-child * {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4.5/3;
+}
+
+.works button {
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+/* ABOUT */
 .about {
     width: 100%;
 }
 
-.about-child{
+.about div {
+    margin: 4rem;
+    margin-bottom: 0;
+}
+
+.about-child {
     margin: 5% 10%;
     font-size: 1.1rem;
 }
 
+/* CLIENTS */
 .clients {
-    background-color: rgb(82, 82, 82);
-    height: 100vh;
     width: 100%;
 }
 
+.clients h3 {
+    margin-bottom: 0;
+}
+
+.clients div {
+    margin: 4rem;
+    margin-bottom: 0;
+}
+
+.clients img {
+    width: 100%;
+}
+
+
+/* CONTACTS */
+.contacts {
+    background-color: rgb(247, 247, 247);
+    width: 100%;
+    text-align: center;
+}
+
+.contacts-breakline {
+    background-color: rgb(207, 207, 207);
+    width: 100%;
+    height: 1px;
+}
+
+.contacts div {
+    margin: 4rem;
+    /* margin-top: 0; */
+}
+
+/* MODAL */
 .modal-works {
     height: 1500px;
 }
@@ -126,21 +207,47 @@ html {
     /* still shows outline when using keyboard navigation */
 }
 
-.footer {}
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    color: rgb(100, 100, 100);
+    background-color: rgba(110, 110, 110, 0.0);
+    cursor: pointer;
+    transition: background-color 0.25s;
+    border-color: rgb(194, 194, 194);
+}
+
+button:hover {
+    background-color: rgb(235, 234, 234)
+}
+
+button:focus,
+button:focus-visible {
+    outline: none
+}
 
 @media (max-width: 576px) {
 
+    .header.scrolled {
+        background: none;
+        box-shadow: none;
+    }
+
     .links {
         flex-direction: column;
-        /* stack vertically */
         align-items: flex-end;
-        /* keep them aligned to the right */
+        gap: 1rem;
+        margin-top: 1.5rem;
+        margin-right: 1.5rem;
         gap: 1.5rem;
-        /* smaller spacing between items */
-        right: 7%
     }
 
     .links a {
+        height: 2rem;
         font-size: 1.2rem;
         border: 1px solid rgba(32, 32, 32, 0.87);
         /* adds a visible border */
@@ -148,10 +255,10 @@ html {
         /* rounded corners, adjust px as needed */
         padding: 0.3rem 0.8rem;
         /* add padding so text doesn’t touch the border */
-        padding-top: 0.1rem;
         transition: all 0.3s ease;
         /* optional: smooth hover effect */
-        background-color: rgba(255, 255, 255, 0.3);;
+        background-color: rgba(255, 255, 255, 0.6);
+        ;
     }
 
     a:hover {
@@ -159,23 +266,29 @@ html {
         border-color: rgba(32, 32, 32, 0.5);
     }
 
-     .info-bullet-points {
+    .info-bullet-points {
         display: flex;
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .works-child {
+        margin-left: 2rem;
+        margin-right: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
 
 }
 
 @media (max-width: 1000px) and (min-width: 576px) {
 
-.info-bullet-points {
-  display: grid;
-  grid-template-columns: 1fr 1fr; 
-  gap: 20px; 
-}
+    .info-bullet-points {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
 
 
 }
-
- 
