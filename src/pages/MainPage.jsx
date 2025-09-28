@@ -9,7 +9,7 @@ const MainPage = () => {
 
     //HEADER//
 
-     const [scrolled, setScrolled] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -118,7 +118,20 @@ const MainPage = () => {
                 </div>
                 <button
                     className="see-all-btn"
-                    onClick={() => setShowAllWorks(prev => !prev)}
+                    onClick={() => {
+                        
+                        setShowAllWorks(prev => {
+                            if (prev === true) {
+                                // only scroll when collapsing
+                                const worksSection = document.getElementById("works");
+                                if (worksSection) {
+                                    worksSection.scrollIntoView({ behavior: "smooth" });
+                                }
+                            }
+                            return !prev;
+                        });
+
+                    }}
                 >
                     {showAllWorks ? "Свернуть галерею" : "Развернуть всю галерею"}
                 </button>
@@ -162,7 +175,7 @@ const MainPage = () => {
                     <h3>
                         Среди наших заказчиков
                     </h3>
-                    <img src="/images/clients.jpg" alt="clients" />
+                    <img src="/images/clients.jpg" alt="clients" loading="lazy" />
                 </div>
             </div>
 

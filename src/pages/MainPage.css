@@ -6,12 +6,12 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     z-index: 100;
 }
 
 .header.scrolled {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.9);
     /* or any color */
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
