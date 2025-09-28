@@ -30,23 +30,50 @@ const MainPage = () => {
     const [showAllWorks, setShowAllWorks] = useState(false);
 
     const worksImages = [
-        "/images/1_1.jpg",
-        "/images/2_1.jpg",
-        "/images/3_1.jpg",
-        "/images/4_1.jpg",
-        "/images/5_1.jpg",
-        "/images/6_1.jpg",
-        "/images/9_1.jpg",
-        "/images/13_1.jpg",
-        "/images/19_1.jpg",
-        "/images/20_1.jpg",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "9",
+        "13",
+        "19",
+        "20",
     ];
 
-
     //MODAL//
-    const [showModal, setShowModal] = useState(false);
+    const [modalImage, setModalImage] = useState(false);
+    const [images, setImages] = useState([]);
 
-    const closeModalHandler = () => { setShowModal(false) };
+    const closeModalHandler = () => {
+        setModalImage(false);
+        setImages([]);
+    };
+
+    useEffect(() => {
+        if (!modalImage) return;
+
+        const found = [];
+        let i = 1;
+
+        const checkNext = () => {
+            const testImg = new Image();
+            testImg.src = `/images/gallery/${modalImage}_${i}.jpg`;
+
+            testImg.onload = () => {
+                found.push(`${modalImage}_${i}`);
+                i++;
+                checkNext(); // keep checking next file
+            };
+
+            testImg.onerror = () => {
+                setImages(found); // stop when file missing
+            };
+        };
+
+        checkNext();
+    }, [modalImage]);
 
     return (
         <>
@@ -110,16 +137,30 @@ const MainPage = () => {
             </div>
 
             {/* WORKS */}
+
+            {/* <div onClick={() => setShowModal(true)}>Open Modal</div> */}
             <div id="works" className="works">
-                <div className="works-child">
+
+                <h3>
+                    Галерея макетов
+                </h3>
+
+                <div className="works-img">
                     {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((src, index) => (
-                        <img key={index} src={src} alt={`diagram ${index + 1}`} loading="lazy" />
+                        <img
+                            key={index}
+                            src={`/images/gallery/${src}_1.jpg`}
+                            alt={`diagram ${index + 1}`}
+                            loading="lazy"
+                            onClick={() => setModalImage(src)}
+                        />
                     ))}
                 </div>
+
                 <button
                     className="see-all-btn"
                     onClick={() => {
-                        
+
                         setShowAllWorks(prev => {
                             if (prev === true) {
                                 // only scroll when collapsing
@@ -135,6 +176,7 @@ const MainPage = () => {
                 >
                     {showAllWorks ? "Свернуть галерею" : "Развернуть всю галерею"}
                 </button>
+
             </div>
 
             {/* ABOUT */}
@@ -192,7 +234,7 @@ const MainPage = () => {
                 ></iframe>
             </div> */}
 
-            <div onClick={() => setShowModal(true)}>Open Modal</div>
+
 
             <div className="contacts-breakline"></div>
             <div id="contacts" className="contacts">
@@ -200,19 +242,26 @@ const MainPage = () => {
             </div>
 
             {/* MODAL */}
-            {showModal && (
+            {modalImage && (
                 <button className="modal-close-btn" onClick={closeModalHandler}>
                     ✖
                 </button>
             )}
 
             <Modal
-                show={showModal}
+                show={modalImage}
                 onCancel={closeModalHandler}
             >
-                <p>This is some content inside the modal.</p>
-                <p>You can put text, forms, or even components here.</p>
-                <div className="modal-works">h</div>
+                <div className="modal-works">
+                    {images.map((imgName) => (
+                        <img
+                            key={imgName}
+                            src={`/images/gallery/${imgName}.jpg`}
+                            alt={imgName}
+                            loading="lazy"
+                        />
+                    ))}
+                </div>
             </Modal>
 
         </>
