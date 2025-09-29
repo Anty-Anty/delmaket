@@ -17,8 +17,11 @@
 }
 
 .logo {
-
     margin: 2rem;
+}
+
+.logo img{
+    width:100%;
 }
 
 .links {
@@ -120,6 +123,12 @@ html {
 .works-img-child p{
     margin-top: 0rem;
     margin-bottom: 0rem;
+}
+
+.works-img-child p:hover{
+   
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .works-img-child img {

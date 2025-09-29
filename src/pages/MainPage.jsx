@@ -30,17 +30,17 @@ const MainPage = () => {
     const [showAllWorks, setShowAllWorks] = useState(false);
 
     // title has to be the same with first number in image file name
-   const worksImages = [
-        {title:"1", description:"model1"},
-        {title:"2", description:"model"},
-        {title:"3", description:"model"},
-        {title:"4", description:"model"},
-        {title:"5", description:"model"},
-        {title:"6", description:"model"},
-        {title:"9", description:"model"},
-        {title:"13", description:"model"},
-        {title:"19", description:"model"},
-        {title:"20", description:"model"},
+    const worksImages = [
+        { title: "1", description: "ГАЛС «Театральный Дом»" },
+        { title: "2", description: "INSIGMA «Red Side»" },
+        { title: "3", description: "INSIGMA «Итальянский Квартал»" },
+        { title: "4", description: "Саввино - Сторожевский монастырь" },
+        { title: "5", description: "МАГИСТРАТ «West Side»" },
+        { title: "6", description: "BARKLI «Barkli Residence»" },
+        { title: "9", description: "Резиденция президента, г.Минск" },
+        { title: "13", description: "БИПЛАН М Интерьер" },
+        { title: "19", description: "ГОРН «Нескучный Home & Spa»" },
+        { title: "20", description: "Загородный дом" }
     ];
 
     //MODAL//
@@ -82,7 +82,9 @@ const MainPage = () => {
             {/* HEADER */}
             <div className={scrolled ? "header scrolled" : "header"}>
                 <div className="logo">
-                    <a href="#home">delmaket</a>
+                    <a href="#home">
+                         <img src="/images/logo.svg" alt="Delmaket logo" className="logo-img" />
+                        </a>
 
                 </div>
 
@@ -125,7 +127,7 @@ const MainPage = () => {
                         <p>
                             • Макеты интерьеров <br />
                             • Макеты из картона, пенополистерола, <br />
-                            деревоа и шпона, пластика <br />
+                            дерева и шпона, пластика <br />
                         </p>
                     </div>
                     <h3>
@@ -156,7 +158,9 @@ const MainPage = () => {
                                 loading="lazy"
                                 onClick={() => setModalImage(work.title)}
                             />
-                            <p>{work.description}</p>
+                            <p onClick={() => setModalImage(work.title)}>
+                                {work.description}
+                            </p>
                         </div>
                     ))}
                 </div>
