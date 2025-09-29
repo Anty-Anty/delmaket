@@ -115,11 +115,18 @@ html {
     gap: 1rem;
 }
 
-.works-img img {
+
+
+.works-img-child p{
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.works-img-child img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     object-fit: cover;
-    aspect-ratio: 4.5/3;
+    aspect-ratio: 4.2/3;
     cursor: pointer;
 }
 
@@ -183,10 +190,13 @@ html {
 /* MODAL */
 .modal-works {
     width:90%;
+    margin: 2rem;
 }
 
 .modal-works img{
     width:100%;
+    margin-bottom: 1rem;
+    
 }
 
 .modal-close-btn {
@@ -286,7 +296,7 @@ button:focus-visible {
         gap: 0.5rem;
     }
 
-    .works-child {
+    .works-img {
         margin-left: 2rem;
         margin-right: 2rem;
         display: flex;

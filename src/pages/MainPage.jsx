@@ -147,13 +147,16 @@ const MainPage = () => {
 
                 <div className="works-img">
                     {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((src, index) => (
-                        <img
-                            key={index}
-                            src={`/images/gallery/${src}_1.jpg`}
-                            alt={`diagram ${index + 1}`}
-                            loading="lazy"
-                            onClick={() => setModalImage(src)}
-                        />
+                        <div className="works-img-child">
+                            <img
+                                key={index}
+                                src={`/images/gallery/${src}_1.jpg`}
+                                alt={`diagram ${index + 1}`}
+                                loading="lazy"
+                                onClick={() => setModalImage(src)}
+                            />
+                            <p>maket</p>
+                        </div>
                     ))}
                 </div>
 
@@ -174,7 +177,7 @@ const MainPage = () => {
 
                     }}
                 >
-                    {showAllWorks ? "Свернуть галерею" : "Развернуть всю галерею"}
+                    {showAllWorks ? "Свернуть галерею" : "Показать все макеты"}
                 </button>
 
             </div>
