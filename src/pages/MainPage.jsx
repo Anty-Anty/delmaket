@@ -29,17 +29,18 @@ const MainPage = () => {
     //WORKS//
     const [showAllWorks, setShowAllWorks] = useState(false);
 
-    const worksImages = [
-        "1",
-        "2",
-        "3",
-        "4",
-        "5",
-        "6",
-        "9",
-        "13",
-        "19",
-        "20",
+    // title has to be the same with first number in image file name
+   const worksImages = [
+        {title:"1", description:"model1"},
+        {title:"2", description:"model"},
+        {title:"3", description:"model"},
+        {title:"4", description:"model"},
+        {title:"5", description:"model"},
+        {title:"6", description:"model"},
+        {title:"9", description:"model"},
+        {title:"13", description:"model"},
+        {title:"19", description:"model"},
+        {title:"20", description:"model"},
     ];
 
     //MODAL//
@@ -146,16 +147,16 @@ const MainPage = () => {
                 </h3>
 
                 <div className="works-img">
-                    {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((src, index) => (
-                        <div className="works-img-child">
+                    {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((work, index) => (
+                        <div key={index} className="works-img-child">
                             <img
                                 key={index}
-                                src={`/images/gallery/${src}_1.jpg`}
-                                alt={`diagram ${index + 1}`}
+                                src={`/images/gallery/${work.title}_1.jpg`}
+                                alt={work.description}
                                 loading="lazy"
-                                onClick={() => setModalImage(src)}
+                                onClick={() => setModalImage(work.title)}
                             />
-                            <p>maket</p>
+                            <p>{work.description}</p>
                         </div>
                     ))}
                 </div>
