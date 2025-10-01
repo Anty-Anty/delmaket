@@ -6,7 +6,7 @@
     position: fixed;
     display: flex;
     justify-content: space-between;
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
     z-index: 100;
 }
 
@@ -17,16 +17,33 @@
 }
 
 .logo {
-    margin: 2rem;
+    margin: 3%;
+    margin-left: 4%;
+    height: 10rem;
+    transition: all 0.8s ease;
 }
 
-.logo img{
-    width:100%;
+.logo.scrolled {
+    margin-top: 0.45rem;
+    height: 3rem;
+}
+
+.logo img {
+    height: 100%;
+    width: 100%;
 }
 
 .links {
+    margin-top: 4rem;
+    margin-right: 4rem;
+    display: flex;
+    gap: 2rem;
+    transition: all 0.8s ease;
+}
+
+.links.scrolled {
     margin-top: 1rem;
-    margin-right: 3rem;
+    margin-right: 4rem;
     display: flex;
     gap: 2rem;
 }
@@ -105,11 +122,11 @@ html {
     align-self: flex-start;
     margin-top: 5rem;
     margin-left: 4rem;
-   
+
 }
 
 .works-img {
-    
+
     margin-left: 4rem;
     margin-right: 4rem;
     display: grid;
@@ -120,13 +137,13 @@ html {
 
 
 
-.works-img-child p{
+.works-img-child p {
     margin-top: 0rem;
     margin-bottom: 0rem;
 }
 
-.works-img-child p:hover{
-   
+.works-img-child p:hover {
+
     text-decoration: underline;
     cursor: pointer;
 }
@@ -198,14 +215,14 @@ html {
 
 /* MODAL */
 .modal-works {
-    width:90%;
+    width: 90%;
     margin: 2rem;
 }
 
-.modal-works img{
-    width:100%;
+.modal-works img {
+    width: 100%;
     margin-bottom: 1rem;
-    
+
 }
 
 .modal-close-btn {
@@ -266,31 +283,40 @@ button:focus-visible {
 @media (max-width: 576px) {
 
     .header.scrolled {
-        background: none;
-        box-shadow: none;
+        /* background: none;
+        box-shadow: none; */
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
     }
 
     .links {
-        flex-direction: column;
-        align-items: flex-end;
+        /* flex-direction: column; */
+        /* align-items: flex-end; */
         gap: 1rem;
-        margin-top: 1.5rem;
-        margin-right: 1.5rem;
-        gap: 1.5rem;
+        margin-top: 3rem;
+        margin-right: 1rem;
+        gap: 1rem;
+         transition: all 0.8s ease;
+    }
+
+    .links.scrolled {
+        margin-top: 0.7rem;
+        margin-right: 1rem;
+        gap: 1rem;
     }
 
     .links a {
         height: 2rem;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         border: 1px solid rgba(32, 32, 32, 0.87);
         /* adds a visible border */
         border-radius: 10px;
         /* rounded corners, adjust px as needed */
-        padding: 0.3rem 0.8rem;
+        padding: 0.2rem 0.6rem;
         /* add padding so text doesn’t touch the border */
         transition: all 0.3s ease;
         /* optional: smooth hover effect */
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.2);
         ;
     }
 

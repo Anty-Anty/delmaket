@@ -60,7 +60,7 @@ const MainPage = () => {
 
         const checkNext = () => {
             const testImg = new Image();
-            testImg.src = `/images/gallery/${modalImage}_${i}.jpg`;
+            testImg.src = `/images/gallery/${modalImage}_${i}.webp`;
 
             testImg.onload = () => {
                 found.push(`${modalImage}_${i}`);
@@ -81,17 +81,18 @@ const MainPage = () => {
 
             {/* HEADER */}
             <div className={scrolled ? "header scrolled" : "header"}>
-                <div className="logo">
-                    <a href="#home">
-                         <img src="/images/logo.svg" alt="Delmaket logo" className="logo-img" />
-                        </a>
 
+                <div className={scrolled ? "logo scrolled" : "logo"}>
+                    <a href="#home">
+                        <img src="/images/logo.svg" alt="Delmaket logo" className="logo-img" />
+                    </a>
                 </div>
 
-                <div className="links">
+                <div className={scrolled ? "links scrolled" : "links"}>
                     <a href="#works">макеты</a>
                     <a href="#contacts">контакты</a>
                 </div>
+
             </div>
 
             {/* MAIN PHOTO */}
@@ -153,7 +154,7 @@ const MainPage = () => {
                         <div key={index} className="works-img-child">
                             <img
                                 key={index}
-                                src={`/images/gallery/${work.title}_1.jpg`}
+                                src={`/images/gallery/${work.title}_1.webp`}
                                 alt={work.description}
                                 loading="lazy"
                                 onClick={() => setModalImage(work.title)}
@@ -264,7 +265,7 @@ const MainPage = () => {
                     {images.map((imgName) => (
                         <img
                             key={imgName}
-                            src={`/images/gallery/${imgName}.jpg`}
+                            src={`/images/gallery/${imgName}.webp`}
                             alt={imgName}
                             loading="lazy"
                         />
