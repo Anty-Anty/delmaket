@@ -60,7 +60,7 @@ const MainPage = () => {
 
         const checkNext = () => {
             const testImg = new Image();
-            testImg.src = `/images/gallery/${modalImage}_${i}.webp`;
+            testImg.src = `${import.meta.env.BASE_URL}images/gallery/${modalImage}_${i}.webp`;
 
             testImg.onload = () => {
                 found.push(`${modalImage}_${i}`);
@@ -84,7 +84,7 @@ const MainPage = () => {
 
                 <div className={scrolled ? "logo scrolled" : "logo"}>
                     <a href="#home">
-                        <img src="/images/logo.svg" alt="Delmaket logo" className="logo-img" />
+                        <img src={`${import.meta.env.BASE_URL}images/logo.svg`} alt="Delmaket logo" className="logo-img" />
                     </a>
                 </div>
 
@@ -99,7 +99,7 @@ const MainPage = () => {
             <div id="home" className="main-photo">
                 {/* <p>Макеты, которые <br /> рассказывают историю <br /> вашего проекта</p> */}
 
-                <img src="/images/main.webp" alt="photo" />
+                <img src={`${import.meta.env.BASE_URL}images/main.webp`} alt="photo" />
             </div>
 
 
@@ -135,7 +135,7 @@ const MainPage = () => {
                         Алгоритм работы
                     </h3>
                     <div className="info-img">
-                        <img src="/images/diagram.png" alt="diagram" />
+                        <img src={`${import.meta.env.BASE_URL}images/diagram.png`} alt="diagram" />
                     </div>
                 </div>
             </div>
@@ -154,7 +154,7 @@ const MainPage = () => {
                         <div key={index} className="works-img-child">
                             <img
                                 key={index}
-                                src={`/images/gallery/${work.title}_1.webp`}
+                                src={`${import.meta.env.BASE_URL}images/gallery/${work.title}_1.webp`}
                                 alt={work.description}
                                 loading="lazy"
                                 onClick={() => setModalImage(work.title)}
@@ -226,7 +226,7 @@ const MainPage = () => {
                     <h3>
                         Среди наших заказчиков
                     </h3>
-                    <img src="/images/clients.jpg" alt="clients" loading="lazy" />
+                    <img src={`${import.meta.env.BASE_URL}images/clients.jpg`} alt="clients" loading="lazy" />
                 </div>
             </div>
 
@@ -265,7 +265,7 @@ const MainPage = () => {
                     {images.map((imgName) => (
                         <img
                             key={imgName}
-                            src={`/images/gallery/${imgName}.webp`}
+                            src={`${import.meta.env.BASE_URL}images/gallery/${imgName}.webp`}
                             alt={imgName}
                             loading="lazy"
                         />
