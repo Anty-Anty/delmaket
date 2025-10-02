@@ -69,12 +69,12 @@ button:focus-visible {
 
 /* Handle (the draggable part) */
 ::-webkit-scrollbar-thumb {
-  background: rgba(100, 100, 100, 0.4);
+  background: rgba(100, 100, 100, 0.6);
   border-radius: 3px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(100, 100, 100, 0.9);
+  background: rgba(100, 100, 100, 1);
 }
 

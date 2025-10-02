@@ -102,6 +102,7 @@ html {
 }
 
 .info-img {
+    margin: 0 7rem;
     display: flex;
     justify-content: center;
 }
@@ -113,29 +114,27 @@ html {
 /* WORKS */
 .works {
     width: 100%;
+
+}
+
+.works-child {
+    margin-left: 4rem;
+    margin-right: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.works h3 {
-    align-self: flex-start;
-    margin-top: 5rem;
-    margin-left: 4rem;
-
+.works-child h3 {
+    align-self: self-start;
 }
 
 .works-img {
-
-    margin-left: 4rem;
-    margin-right: 4rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     /* grid-auto-rows: 325px; */
     gap: 1rem;
 }
-
-
 
 .works-img-child p {
     margin-top: 0rem;
@@ -159,6 +158,7 @@ html {
 .works button {
     margin-top: 3rem;
     margin-bottom: 3rem;
+    padding: 0.7em 1em;
 }
 
 /* ABOUT */
@@ -215,7 +215,7 @@ html {
 
 /* MODAL */
 .modal-works {
-    width: 90%;
+    width: 100%;
     margin: 2rem;
 }
 
@@ -228,9 +228,9 @@ html {
 .modal-close-btn {
     position: fixed;
     /* fixed to viewport */
-    top: 4.5rem;
+    top: 1rem;
     /* distance from top of screen */
-    right: 1.5rem;
+    right: 1rem;
     /* distance from right edge of screen */
     background-color: #646cff00;
     color: rgba(238, 238, 238, 0.8);
@@ -291,28 +291,31 @@ button:focus-visible {
 
     .links {
         /* flex-direction: column; */
-        /* align-items: flex-end; */
+        align-items: center;
         gap: 1rem;
         margin-top: 3rem;
         margin-right: 1rem;
-        gap: 1rem;
-         transition: all 0.8s ease;
+        gap: 0.5rem;
+        transition: all 0.8s ease;
     }
 
     .links.scrolled {
         margin-top: 0.7rem;
         margin-right: 1rem;
-        gap: 1rem;
+        gap: 0.5rem;
+        margin-top: 0;
     }
 
     .links a {
-        height: 2rem;
-        font-size: 1.1rem;
+        height: 1.5rem;
+        font-size: 1rem;
         border: 1px solid rgba(32, 32, 32, 0.87);
         /* adds a visible border */
         border-radius: 10px;
         /* rounded corners, adjust px as needed */
-        padding: 0.2rem 0.6rem;
+        padding-left: 0.4rem;
+        padding-right: 0.4rem;
+        padding-bottom: 0.15rem;
         /* add padding so text doesn’t touch the border */
         transition: all 0.3s ease;
         /* optional: smooth hover effect */
@@ -331,13 +334,7 @@ button:focus-visible {
         gap: 0.5rem;
     }
 
-    .works-img {
-        margin-left: 2rem;
-        margin-right: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+
 
 }
 
@@ -348,6 +345,53 @@ button:focus-visible {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
+
+
+}
+
+@media (max-width: 1000px) {
+
+    .works-child {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .works-img {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .info-child {
+        margin: 2rem;
+        margin-top: 6rem;
+        margin-bottom: 0;
+    }
+
+    .info-img {
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .about div {
+        margin: 2rem;
+        margin-bottom: 0;
+    }
+
+    .about-child {
+        margin: 5% 0;
+        font-size: 1.1rem;
+    }
+
+    .clients div {
+        margin: 2rem;
+    }
+
+    .modal-works {
+    width: 90%;
+    margin: 0;
+}
 
 
 }

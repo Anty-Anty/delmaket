@@ -144,47 +144,47 @@ const MainPage = () => {
 
             {/* <div onClick={() => setShowModal(true)}>Open Modal</div> */}
             <div id="works" className="works">
+                <div className="works-child">
+                    <h3>
+                        Галерея макетов
+                    </h3>
 
-                <h3>
-                    Галерея макетов
-                </h3>
+                    <div className="works-img">
+                        {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((work, index) => (
+                            <div key={index} className="works-img-child">
+                                <img
+                                    key={index}
+                                    src={`${import.meta.env.BASE_URL}images/gallery/${work.title}_1.webp`}
+                                    alt={work.description}
+                                    loading="lazy"
+                                    onClick={() => setModalImage(work.title)}
+                                />
+                                <p onClick={() => setModalImage(work.title)}>
+                                    {work.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
 
-                <div className="works-img">
-                    {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((work, index) => (
-                        <div key={index} className="works-img-child">
-                            <img
-                                key={index}
-                                src={`${import.meta.env.BASE_URL}images/gallery/${work.title}_1.webp`}
-                                alt={work.description}
-                                loading="lazy"
-                                onClick={() => setModalImage(work.title)}
-                            />
-                            <p onClick={() => setModalImage(work.title)}>
-                                {work.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+                    <button
+                        onClick={() => {
 
-                <button
-                    className="see-all-btn"
-                    onClick={() => {
-
-                        setShowAllWorks(prev => {
-                            if (prev === true) {
-                                // only scroll when collapsing
-                                const worksSection = document.getElementById("works");
-                                if (worksSection) {
-                                    worksSection.scrollIntoView({ behavior: "smooth" });
+                            setShowAllWorks(prev => {
+                                if (prev === true) {
+                                    // only scroll when collapsing
+                                    const worksSection = document.getElementById("works");
+                                    if (worksSection) {
+                                        worksSection.scrollIntoView({ behavior: "smooth" });
+                                    }
                                 }
-                            }
-                            return !prev;
-                        });
+                                return !prev;
+                            });
 
-                    }}
-                >
-                    {showAllWorks ? "Свернуть галерею" : "Показать все макеты"}
-                </button>
+                        }}
+                    >
+                        {showAllWorks ? "Свернуть галерею" : "Показать все макеты"}
+                    </button>
+                </div>
 
             </div>
 
@@ -231,19 +231,6 @@ const MainPage = () => {
             </div>
 
             {/* CONTACTS */}
-            {/* <div className="video-container">
-                <iframe
-                    width="560"
-                    height="315"
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-                    title="YouTube video player"
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                ></iframe>
-            </div> */}
-
-
 
             <div className="contacts-breakline"></div>
             <div id="contacts" className="contacts">

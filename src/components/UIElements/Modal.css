@@ -1,8 +1,8 @@
 .modal {
   /* width: calc(30% - 2rem); */
-  width: 75vw;
+  width: 85vw;
   /* The modal content will scroll if it exceeds max-height */
-  max-height: 80vh;
+  max-height: 90vh;
   /* modal content scrolls */
   overflow-y: auto;
 
@@ -38,7 +38,6 @@
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 0.5rem 0.5rem;
 }
 
 .modal__footer {
