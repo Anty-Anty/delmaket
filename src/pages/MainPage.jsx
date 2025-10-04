@@ -150,18 +150,32 @@ const MainPage = () => {
                     </h3>
 
                     <div className="works-img">
-                        {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((work, index) => (
-                            <div key={index} className="works-img-child">
-                                <img
-                                    key={index}
-                                    src={`${import.meta.env.BASE_URL}images/gallery/${work.title}_1.webp`}
-                                    alt={work.description}
-                                    loading="lazy"
-                                    onClick={() => setModalImage(work.title)}
-                                />
+                        {(showAllWorks ? worksImages : worksImages.slice(0, 6)).map((work) => (
+                            <div key={work.title}>
+
+                                <div className="works-img-child">
+                                    <div className="works-img-click">
+                                        <img
+                                            src={`${import.meta.env.BASE_URL}images/hand-pointer.svg`}
+                                            alt="click"
+                                            onClick={() => setModalImage(work.title)}
+                                        />
+
+                                    </div>
+
+                                    <img
+                                        src={`${import.meta.env.BASE_URL}images/gallery/${work.title}_1.webp`}
+                                        alt={work.description}
+                                        loading="lazy"
+                                        onClick={() => setModalImage(work.title)}
+                                        className="works-img-child-img"
+                                    />
+                                </div>
+                                
                                 <p onClick={() => setModalImage(work.title)}>
                                     {work.description}
                                 </p>
+
                             </div>
                         ))}
                     </div>
