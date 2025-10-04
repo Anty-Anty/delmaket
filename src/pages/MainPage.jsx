@@ -107,7 +107,7 @@ const MainPage = () => {
             <div className="info">
                 <div className="info-child">
                     <h3>
-                        Нашей макетной мастерской более 25 лет. Мы делаем макеты любой сложности.
+                        Нашей макетной мастерской более 35 лет. Мы делаем макеты любой сложности.
                     </h3>
                     <div className="info-bullet-points">
                         <p>
@@ -134,9 +134,21 @@ const MainPage = () => {
                     <h3>
                         Алгоритм работы
                     </h3>
+
+                    {/* show a different image under 900px width */}
                     <div className="info-img">
-                        <img src={`${import.meta.env.BASE_URL}images/diagram.png`} alt="diagram" />
+                        <picture>
+                            <source
+                                srcSet={`${import.meta.env.BASE_URL}images/diagram-mobile.png`}
+                                media="(max-width: 900px)"
+                            />
+                            <img
+                                src={`${import.meta.env.BASE_URL}images/diagram.png`}
+                                alt="diagram"
+                            />
+                        </picture>
                     </div>
+
                 </div>
             </div>
 
@@ -171,7 +183,7 @@ const MainPage = () => {
                                         className="works-img-child-img"
                                     />
                                 </div>
-                                
+
                                 <p onClick={() => setModalImage(work.title)}>
                                     {work.description}
                                 </p>

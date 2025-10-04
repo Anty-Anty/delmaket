@@ -102,17 +102,18 @@ html {
 }
 
 .info-img {
-    margin: 0 7rem;
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
 }
 
 .info-img img {
-    width: 90%;
+    width: 100%;
 }
 
 /* WORKS */
 .works {
+    padding-top: 4rem;
     width: 100%;
 
 }
@@ -359,19 +360,16 @@ button:focus-visible {
 
 }
 
-@media (max-width: 1000px) {
+/* controls diagram size */
+@media (min-width: 1600px) {
+    .info-img {
+   padding-left: 12rem;
+   padding-right: 12rem;
+}
 
-    .works-child {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
+}
 
-    .works-img {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
+@media (max-width: 800px) {
     .works-img-click {
         width: 10%;
         opacity: 0.5;
@@ -390,8 +388,20 @@ button:focus-visible {
         width: 100%;
         height: 100%;
     }
+}
 
+@media (max-width: 1000px) {
 
+    .works-child {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+
+    .works-img {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
 
     .info-child {
         margin: 2rem;
@@ -401,6 +411,7 @@ button:focus-visible {
 
     .info-img {
         margin: 0;
+        margin-top: 3rem;
         display: flex;
         justify-content: center;
     }
