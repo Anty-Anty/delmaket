@@ -91,11 +91,12 @@ const MainPage = () => {
                 <div className={scrolled ? "links scrolled" : "links"}>
                     <a href="#works">макеты</a>
                     <a href="#contacts">контакты</a>
+                     <a href="#contacts" className="links-en-btn">🌐︎ EN</a>
                 </div>
 
             </div>
 
-            {/* MAIN PHOTO */}
+            {/* MAIN BACKGROUND IMG */}
             <div id="home" className="main-photo">
                 {/* <p>Макеты, которые <br /> рассказывают историю <br /> вашего проекта</p> */}
 
