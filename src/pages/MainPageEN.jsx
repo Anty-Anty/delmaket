@@ -84,15 +84,14 @@ const MainPage = () => {
 
                 <div className={scrolled ? "logo scrolled" : "logo"}>
                     <a href="#home">
-                        <img src={`${import.meta.env.BASE_URL}images/logo.svg`} alt="Delmaket logo" className="logo-img" />
+                        <img src={`${import.meta.env.BASE_URL}images/logo_en.svg`} alt="Delmaket logo" className="logo-img" />
                     </a>
                 </div>
 
                 <div className={scrolled ? "links scrolled" : "links"}>
-                    <a href="#works">макеты</a>
-                    <a href="#contacts">контакты</a>
-                    <a href={`${import.meta.env.BASE_URL}#/en`} className="links-en-btn">🌐︎ EN</a>
-                    {/* <a href="#contacts" className="links-en-btn">🌐︎ RU</a> */}
+                    <a href="#works">models</a>
+                    <a href="#contacts">contacts</a>
+                    <a href={`${import.meta.env.BASE_URL}`} className="links-en-btn">🌐︎ RU</a>
                 </div>
 
             </div>

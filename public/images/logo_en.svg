@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 293.33 266.98">
+  <!-- Generator: Adobe Illustrator 29.8.1, SVG Export Plug-In . SVG Version: 2.1.1 Build 2)  -->
+  <defs>
+    <style>
+      .st0, .st1 {
+        stroke-linecap: round;
+      }
+
+      .st0, .st1, .st2 {
+        fill: none;
+        stroke: #353132;
+        stroke-width: 10px;
+      }
+
+      .st0, .st2 {
+        stroke-miterlimit: 10;
+      }
+
+      .st1 {
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <g id="LINE">
+    <line class="st0" x1="154.63" y1="209.7" x2="171.07" y2="250.78"/>
+  </g>
+  <path class="st0" d="M12.33,116.61V41.69h22.65c6.74,0,12.2,5.46,12.2,12.2v57.5"/>
+  <path class="st0" d="M65.38,116.61c0,6.74,5.46,12.2,12.2,12.2h22.68"/>
+  <line class="st2" x1="65.38" y1="36.59" x2="65.38" y2="116.61"/>
+  <g id="LINE-2">
+    <line class="st0" x1="79.48" y1="41.69" x2="99.23" y2="41.69"/>
+  </g>
+  <g id="LINE-3">
+    <line class="st0" x1="79.48" y1="85.25" x2="99.23" y2="85.25"/>
+  </g>
+  <g id="ARC">
+    <path class="st0" d="M118.42,41.69v74.92c0,6.74,5.46,12.2,12.2,12.2h22.65"/>
+  </g>
+  <g id="ARC-3">
+    <path class="st0" d="M82.81,250.72v-74.86c0-6.74,5.46-12.2,12.2-12.2h10.45c6.74,0,12.2,5.46,12.2,12.2v74.86"/>
+  </g>
+  <g id="LINE-5">
+    <line class="st0" x1="96.91" y1="207.22" x2="103.56" y2="207.22"/>
+  </g>
+  <g id="LINE-6">
+    <line class="st0" x1="135.85" y1="250.72" x2="135.85" y2="163.64"/>
+  </g>
+  <g id="ARC-4">
+    <path class="st0" d="M149.85,207.22h8.65c6.74,0,12.2-5.46,12.2-12.2v-31.38"/>
+  </g>
+  <path class="st0" d="M188.89,238.58c0,6.74,5.46,12.2,12.2,12.2h22.65"/>
+  <line class="st2" x1="188.89" y1="158.66" x2="188.89" y2="238.58"/>
+  <g id="LINE-7">
+    <line class="st0" x1="202.99" y1="163.66" x2="223.74" y2="163.66"/>
+  </g>
+  <g id="LINE-8">
+    <line class="st0" x1="202.99" y1="207.22" x2="223.74" y2="207.22"/>
+  </g>
+  <g id="LINE-9">
+    <line class="st0" x1="237.94" y1="163.66" x2="276.79" y2="163.66"/>
+  </g>
+  <g id="LINE-10">
+    <line class="st0" x1="257.36" y1="250.72" x2="257.36" y2="177.76"/>
+  </g>
+  <path class="st0" d="M12.34,116.61c0,6.74,5.46,12.2,12.2,12.2h22.64"/>
+  <g id="LINE1" data-name="LINE">
+    <line class="st1" x1="38.48" y1="250.74" x2="38.48" y2="191.24"/>
+  </g>
+  <g id="ARC1" data-name="ARC">
+    <path class="st1" d="M64.61,250.74v-87.06l-20.1,11.61c-3.76,2.15-8.43,2.13-12.17-.06l-20-11.55v87.06"/>
+  </g>
+</svg>
