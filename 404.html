@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=/delmaket/" />
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      // Redirect all 404s to index.html, preserving path
+      const redirect = '/delmaket' + window.location.pathname + window.location.search;
+      window.location.replace(redirect);
+    </script>
   </head>
   <body></body>
 </html>
