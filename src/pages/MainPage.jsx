@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 import Footer from "../components/Footer";
 import Modal from "../components/UIElements/Modal";
@@ -83,14 +84,14 @@ const MainPage = () => {
             <div className={scrolled ? "header scrolled" : "header"}>
 
                 <div className={scrolled ? "logo scrolled" : "logo"}>
-                    <a href="#home">
+                    <Link to="home" smooth={true} duration={50}>
                         <img src={`${import.meta.env.BASE_URL}images/logo.svg`} alt="Delmaket logo" className="logo-img" />
-                    </a>
+                    </Link>
                 </div>
 
                 <div className={scrolled ? "links scrolled" : "links"}>
-                    <a href="#works">макеты</a>
-                    <a href="#contacts">контакты</a>
+                    <Link to="works" smooth={true} duration={50}>макеты</Link>
+                    <Link to="contacts" smooth={true} duration={50}>контакты</Link>
                     <a href={`${import.meta.env.BASE_URL}#/en`} className="links-en-btn">🌐︎ EN</a>
                     {/* <a href="#contacts" className="links-en-btn">🌐︎ RU</a> */}
                 </div>

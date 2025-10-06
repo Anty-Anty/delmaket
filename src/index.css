@@ -16,7 +16,9 @@ a {
   font-weight: 500;
   color: rgba(32, 32, 32, 0.87);
   text-decoration: inherit;
+  cursor: pointer;
 }
+
 a:hover {
   color: rgba(32, 32, 32, 0.5);
 }
@@ -43,9 +45,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #666666;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -77,4 +81,3 @@ button:focus-visible {
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(100, 100, 100, 1);
 }
-
