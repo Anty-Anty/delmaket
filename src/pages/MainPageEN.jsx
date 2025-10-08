@@ -32,16 +32,16 @@ const MainPage = () => {
 
     // title has to be the same with first number in image file name
     const worksImages = [
-        { title: "1", description: "ГАЛС «Театральный Дом»" },
+        { title: "1", description: "HALS “Theatre House”" },
         { title: "2", description: "INSIGMA «Red Side»" },
-        { title: "3", description: "INSIGMA «Итальянский Квартал»" },
-        { title: "4", description: "Саввино - Сторожевский монастырь" },
-        { title: "5", description: "МАГИСТРАТ «West Side»" },
+        { title: "3", description: "INSIGMA “Italian Quarter”" },
+        { title: "4", description: "Savvino-Storozhevsky Monastery" },
+        { title: "5", description: "MAGISTRAT «West Side»" },
         { title: "6", description: "BARKLI «Barkli Residence»" },
-        { title: "9", description: "Резиденция президента, г.Минск" },
-        { title: "13", description: "БИПЛАН М Интерьер" },
-        { title: "19", description: "ГОРН «Нескучный Home & Spa»" },
-        { title: "20", description: "Загородный дом" }
+        { title: "9", description: "Residence, Minsk" },
+        { title: "13", description: "BIPLAN M Interior" },
+        { title: "19", description: "GORN “Neskuchny Home & Spa”" },
+        { title: "20", description: "Private Residence" }
     ];
 
     //MODAL//
@@ -99,7 +99,7 @@ const MainPage = () => {
 
             {/* MAIN BACKGROUND IMG */}
             <div id="home" className="main-photo">
-                {/* <p>Макеты, которые <br /> рассказывают историю <br /> вашего проекта</p> */}
+                <p>With our help, <br /> your project <br /> will succeed!</p>
 
                 <img src={`${import.meta.env.BASE_URL}images/main.webp`} alt="photo" />
             </div>
@@ -109,32 +109,35 @@ const MainPage = () => {
             <div className="info">
                 <div className="info-child">
                     <h3>
-                        Нашей макетной мастерской более 35 лет. Мы делаем макеты любой сложности.
+                        Our model-making workshop has been operating for over 35 years.
+                        We create models of any complexity.
                     </h3>
+
                     <div className="info-bullet-points">
                         <p>
-                            • Макеты для выставок <br />
-                            • Макеты с интерактивным управлением <br />
-                            • Рабочие макеты для архитекторов <br />
+                            • Models for exhibitions<br />
+                            • Interactive models <br />
+                            • Working models for architects <br />
                         </p>
                         <p>
-                            • Градостроительные макеты <br />
-                            • Макеты городов <br />
-                            • Модели транспорта <br />
+                            • Urban planning models <br />
+                            • Models of cities<br />
+                            • Transport models <br />
                         </p>
                         <p>
-                            • Макеты комплексов <br />
-                            • Макеты коттеджей <br />
-                            • Макеты коттеджных поселков <br />
+                            • Building complex models <br />
+                            • Cottage models <br />
+                            • Models of cottage settlements <br />
                         </p>
                         <p>
-                            • Макеты интерьеров <br />
-                            • Макеты из картона, пенополистерола, <br />
-                            дерева и шпона, пластика <br />
+                            • Interior models <br />
+                            • Models made of cardboard, polystyrene foam, <br />
+                            wood and veneer, plastic <br />
                         </p>
                     </div>
+
                     <h3>
-                        Алгоритм работы
+                        Work process
                     </h3>
 
                     {/* show a different image under 900px width */}
@@ -160,7 +163,7 @@ const MainPage = () => {
             <div id="works" className="works">
                 <div className="works-child">
                     <h3>
-                        Галерея макетов
+                        Model Gallery
                     </h3>
 
                     <div className="works-img">
@@ -210,7 +213,7 @@ const MainPage = () => {
 
                         }}
                     >
-                        {showAllWorks ? "Свернуть галерею" : "Показать все макеты"}
+                        {showAllWorks ? "Hide gallery" : "Show all models"}
                     </button>
                 </div>
 
@@ -221,29 +224,32 @@ const MainPage = () => {
 
                 <div>
                     <h3>
-                        Информация о мастерской
+                        About the Workshop
                     </h3>
 
                     <p className="about-child">
-                        Более четверти века мы занимаемся макетированием, макетированием зданий,
-                        комплексов, городов, посёлков, интерьеров, техники, всего, что движется и
-                        не движется. Мы делаем макеты разные по назначению, из разных материалов,
-                        используем новейшую технику и современные технологии. <br />
-                        <br />
-                        Макетирование — творческий процесс. Много целей, вкусов, требований. С
-                        одной стороны макет должен помочь заказчику быстро и недорого реализовать
-                        свои планы, с другой- быть логичным, оригинальным, неповторимым. Макет не
-                        только точная копия проекта и набор спецэффектов — это живое произведение
-                        достойное внимания профессионала. Наш опыт и архитектурное образование
-                        позволяют не только макетировать, но и профессионально корректировать проекты. <br />
-                        <br />
-                        Мы сотрудничаем с архитекторами, инженерами, дизайнерами, художниками,
-                        скульпторами, приглашаем к сотрудничеству другие макетные мастерские. <br />
-                        <br />
-                        При необходимости поможем определиться, проконсультируем, порекомендуем.
-                        Звоните, пишите, с нами у Вас всё получится! <br />
-                        Стоимость определяется расчётом, рекомендованным комитетом города Москвы
-                        по ценовой политике в строительстве и государственной экспертизе проектов.
+                        For more than a quarter of a century, we have been creating scale models —
+                        of buildings, complexes, cities, towns, interiors, and vehicles — everything
+                        that moves and everything that doesn’t. We build models for different purposes,
+                        using various materials, the latest equipment, and modern technologies. <br /><br />
+
+                        Model making is a creative process. There are many goals, tastes, and requirements.
+                        On the one hand, a model should help the client quickly and affordably realize
+                        their plans; on the other hand, it should be logical, original, and unique.
+                        A model is not just an accurate copy of a project or a set of effects —
+                        it is a living work of art worthy of professional attention. Our experience
+                        and architectural education allow us not only to create models but also to
+                        professionally refine architectural designs. <br /><br />
+
+                        We collaborate with architects, engineers, designers, artists, and sculptors,
+                        and we welcome partnerships with other model-making studios. <br /><br />
+
+                        If necessary, we can help you choose the right approach, provide consultations,
+                        and offer recommendations. Call or write to us — with our help, your project
+                        will succeed! <br />
+                        The cost of work is determined according to the pricing guidelines
+                        recommended by the Moscow City Committee for Construction Pricing
+                        and State Project Expertise.
                     </p>
                 </div>
             </div>
@@ -252,7 +258,7 @@ const MainPage = () => {
             <div className="clients">
                 <div>
                     <h3>
-                        Среди наших заказчиков
+                        Among our clients
                     </h3>
                     <img src={`${import.meta.env.BASE_URL}images/clients.jpg`} alt="clients" loading="lazy" />
                 </div>

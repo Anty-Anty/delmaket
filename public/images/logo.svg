@@ -113,10 +113,10 @@
   <g id="LINE-18">
     <line class="st0" x1="267.45" y1="256.4" x2="267.45" y2="183.44"/>
   </g>
-  <g id="LINE1" data-name="LINE">
+  <g id="LINE1">
     <line class="st1" x1="48.56" y1="256.39" x2="48.56" y2="196.89"/>
   </g>
-  <g id="ARC1" data-name="ARC">
+  <g id="ARC1">
     <path class="st1" d="M74.69,256.39v-87.06l-20.1,11.61c-3.76,2.15-8.43,2.13-12.17-.06l-20-11.55v87.06"/>
   </g>
 </svg>

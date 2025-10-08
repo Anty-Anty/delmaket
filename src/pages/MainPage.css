@@ -65,12 +65,15 @@ html {
 }
 
 .main-photo p {
-    top: 15%;
-    left: 5%;
+    top: 15rem;
+    left: 4.5%;
     position: absolute;
     font-weight: 1000;
-    font-size: 1.9rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 2.9rem;
+    line-height: 1.3;
+    color: rgba(255, 255, 255, 1);
+
+    transition: all 0.8s ease;
 }
 
 .main-photo img {
@@ -318,6 +321,14 @@ button:focus-visible {
         height: 3rem;
     }
 
+    .main-photo p {
+        top: 9rem;
+        line-height: 1.2;
+        font-size: 2.2rem;
+        color: rgba(255, 255, 255, 0.8);
+
+    }
+
     .links {
         flex-direction: column;
         text-align: center;
@@ -461,4 +472,12 @@ button:focus-visible {
     }
 
 
+}
+
+
+@media (min-width: 3500px) {
+     .main-photo p {
+        top: 19rem
+
+    }
 }

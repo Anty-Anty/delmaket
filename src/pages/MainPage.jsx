@@ -100,7 +100,7 @@ const MainPage = () => {
 
             {/* MAIN BACKGROUND IMG */}
             <div id="home" className="main-photo">
-                {/* <p>Макеты, которые <br /> рассказывают историю <br /> вашего проекта</p> */}
+                <p>C нами <br /> у Вас всё <br /> получится!</p>
 
                 <img src={`${import.meta.env.BASE_URL}images/main.webp`} alt="photo" />
             </div>
