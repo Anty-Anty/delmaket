@@ -3,6 +3,7 @@ import { Link } from "react-scroll";
 
 import Footer from "../components/Footer";
 import Modal from "../components/UIElements/Modal";
+import LoadingSpinner from "../components/UIElements/LoadingSpinner";
 
 import "./MainPage.css"
 
@@ -47,10 +48,12 @@ const MainPage = () => {
     //MODAL//
     const [modalImage, setModalImage] = useState(false);
     const [images, setImages] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const closeModalHandler = () => {
         setModalImage(false);
         setImages([]);
+        setIsLoading(false); // stop spinner
     };
 
     useEffect(() => {
@@ -58,6 +61,7 @@ const MainPage = () => {
 
         const found = [];
         let i = 1;
+        setIsLoading(true); // start spinner
 
         const checkNext = () => {
             const testImg = new Image();
@@ -71,6 +75,7 @@ const MainPage = () => {
 
             testImg.onerror = () => {
                 setImages(found); // stop when file missing
+                setIsLoading(false); // stop spinner
             };
         };
 
@@ -282,16 +287,20 @@ const MainPage = () => {
                 show={modalImage}
                 onCancel={closeModalHandler}
             >
-                <div className="modal-works">
-                    {images.map((imgName) => (
-                        <img
-                            key={imgName}
-                            src={`${import.meta.env.BASE_URL}images/gallery/${imgName}.webp`}
-                            alt={imgName}
-                            loading="lazy"
-                        />
-                    ))}
-                </div>
+                {isLoading ? (
+                    <LoadingSpinner asOverlay />
+                ) : (
+                    <div className="modal-works">
+                        {images.map((imgName) => (
+                            <img
+                                key={imgName}
+                                src={`${import.meta.env.BASE_URL}images/gallery/${imgName}.webp`}
+                                alt={imgName}
+                                loading="lazy"
+                            />
+                        ))}
+                    </div>
+                )}
             </Modal>
 
         </>
