@@ -14,7 +14,7 @@ const MainPage = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 400) {
+            if (window.scrollY > 60) {
                 setScrolled(true);
             } else {
                 setScrolled(false);

@@ -14,7 +14,7 @@ const MainPage = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 400) {
+            if (window.scrollY > 60) {
                 setScrolled(true);
             } else {
                 setScrolled(false);
@@ -144,11 +144,11 @@ const MainPage = () => {
                     <div className="info-img">
                         <picture>
                             <source
-                                srcSet={`${import.meta.env.BASE_URL}images/diagram-mobile.png`}
+                                srcSet={`${import.meta.env.BASE_URL}images/diagram-mobile_en.png`}
                                 media="(max-width: 900px)"
                             />
                             <img
-                                src={`${import.meta.env.BASE_URL}images/diagram.png`}
+                                src={`${import.meta.env.BASE_URL}images/diagram_en.png`}
                                 alt="diagram"
                             />
                         </picture>
