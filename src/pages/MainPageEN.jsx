@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
-import Footer from "../components/Footer";
+import Footer from "../components/Footer_en";
 import Modal from "../components/UIElements/Modal";
 import LoadingSpinner from "../components/UIElements/LoadingSpinner";
 
