@@ -126,6 +126,20 @@ This avoids unnecessary libraries and keeps behavior predictable.
 - Ability to build production-ready static sites
 - Experience working with visual-heavy content
 
+## Screenshots
+
+### Landing Page
+![Landing Page](public/screenshots/landing.webp)
+
+### Portfolio Gallery
+![Gallery Grid](public/screenshots/gallery.webp)
+
+### Image Viewer Modal
+![Gallery Modal](public/screenshots/modal.webp)
+
+### Mobile View
+![Mobile View](public/screenshots/mobile.webp)
+
 ## Notes
 
 This project intentionally does not include a backend:
@@ -137,5 +151,5 @@ This was a deliberate choice to keep the site fast, reliable, and easy to deploy
 
 ## License
 
-Private / Client project
+Private / Client project 
 Code shown here is for portfolio demonstration purposes.
